@@ -4,7 +4,9 @@ This Project will cover the following Industry-level Design Patterns for Angular
 
 1 VsCode Tooling for Angular
 
-
+	-----> Angular Language Service
+	-----> Angular Sinppets
+	-----> npm Intellisense
 
 
 2 RxJs Subscription
