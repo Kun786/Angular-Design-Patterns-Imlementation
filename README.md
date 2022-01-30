@@ -83,3 +83,6 @@ This Project will cover the following Industry-level Design Patterns for Angular
 
 
 7 Compound Debugging
+
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
