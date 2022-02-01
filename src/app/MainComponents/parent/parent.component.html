@@ -1,2 +1,6 @@
-<h1 class="text-center">Parent Worrks</h1>
-<app-child></app-child>
+<h1 class="text-center text-success mt-5">Parent Works</h1><br>
+<p class="text-center text-info mt-5">{{_Constructor}}<br>{{_ngOnInIt}}</p>
+<div class="container">
+    <button class="w-100 btn btn-outline-warning" (click)="ShowChild()">Show Child</button>
+</div>
+<app-child *ngIf="_ShowChild===1"></app-child>

@@ -3,6 +3,13 @@
 # Angular LifeCycle Hooks
 <img src="https://codecraft.tv/courses/angular/components/lifecycle-hooks/images/lifecycle-hooks.png" width="500" height="500">
 
+How Angular Life Cycle Hooks Works??
+Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
+thing is called 
+
+-> Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that 
+-> ngOnInIt() // This life cycle is called only one time when component is initialized.
+
 This Project will cover the following Industry-level Design Patterns for Angular Development.
 
 1 VsCode Tooling for Angular

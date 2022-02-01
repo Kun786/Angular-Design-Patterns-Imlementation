@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  _Constructor='';
+  _ngOnInIt='';
+  _ShowChild=0;
+  constructor() { 
+    this._Constructor = 'Parent Constructor has Called';
   }
 
+  ngOnInit(): void {
+    this._ngOnInIt = 'Parent ngOnInIt life Cycle Hooks is called Remember ngOnInIt() and Constructor once called During Initilization'
+  }
+
+  ShowChild(){
+    this._ShowChild = 1;
+  }
 }
