@@ -9,8 +9,9 @@
 Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
 thing is called 
 
-:heavy_check_mark: :one: Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br> 
-:heavy_check_mark: :two: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
+:heavy_check_mark: :one: Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br>
+:heavy_check_mark: :two: ngOnChanges() // This Life-Cycle is called before the ngOnInIt()<br> 
+:heavy_check_mark: :three: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
 :heavy_check_mark:       ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
 to handle memory leaks for example subscribe() events or some other data manipulation it should be unsubscribe() or clear() in ngOnDestroy() to avoid<br>
 memory leaks. A Code Example has given in the child component. 
