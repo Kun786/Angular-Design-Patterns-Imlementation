@@ -18,12 +18,13 @@ export class ChildComponent implements OnInit, OnDestroy {
     this._Interval = setInterval(()=>{
       let counter=0;
       counter=counter+1;
-      console.log(counter);
+      console.log(`${counter}`,'\n');
     },1000)
   }
 
 
   ngOnDestroy(): void {
+      clearInterval(this._Interval); //Here i am Clearing the Data and You can also unsubscribe() the obversable
       console.log('Child Component is Destroyed');
   }
 }
