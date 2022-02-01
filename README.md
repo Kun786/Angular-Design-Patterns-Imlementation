@@ -1,6 +1,7 @@
 ### Angular-Design-Patterns-Imlementation
 
 ---
+
 # Angular LifeCycle Hooks
 <img src="https://codecraft.tv/courses/angular/components/lifecycle-hooks/images/lifecycle-hooks.png" width="500" height="500">
 
@@ -10,6 +11,7 @@ thing is called
 
 -> Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that 
 -> ngOnInIt() // This life cycle is called only one time when component is initialized.
+
 ---
 
 This Project will cover the following Industry-level Design Patterns for Angular Development.
