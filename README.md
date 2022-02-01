@@ -5,7 +5,7 @@
 ### Angular LifeCycle Hooks
 <img src="https://codecraft.tv/courses/angular/components/lifecycle-hooks/images/lifecycle-hooks.png" width="500" height="500">
 
-How Angular Life Cycle Hooks Works??
+:arrow_forward: How Angular Life Cycle Hooks Works??
 Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
 thing is called 
 
