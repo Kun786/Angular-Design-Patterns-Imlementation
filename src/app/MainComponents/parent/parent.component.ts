@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent implements OnInit {
+export class ParentComponent implements OnInit{
   _Constructor='';
   _ngOnInIt='';
-  _ShowChild=0;
+  _ShowChild=false;
   constructor() { 
     this._Constructor = 'Parent Constructor has Called';
   }
@@ -18,6 +18,7 @@ export class ParentComponent implements OnInit {
   }
 
   ShowChild(){
-    this._ShowChild = 1;
+    this._ShowChild = !this._ShowChild;
   }
+
 }
