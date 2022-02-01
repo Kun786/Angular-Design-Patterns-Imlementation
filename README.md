@@ -9,8 +9,8 @@ How Angular Life Cycle Hooks Works??
 Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
 thing is called 
 
--> Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br> 
--> ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
+:heavy_check_mark: Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br> 
+:heavy_check_mark: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
 
 ---
 
