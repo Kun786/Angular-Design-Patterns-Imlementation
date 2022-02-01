@@ -1,5 +1,7 @@
-# Angular-Design-Patterns-Imlementation
+### Angular-Design-Patterns-Imlementation
 
+# Angular LifeCycle Hooks
+![alt text](https://codecraft.tv/courses/angular/components/lifecycle-hooks/images/lifecycle-hooks.png)
 
 This Project will cover the following Industry-level Design Patterns for Angular Development.
 
