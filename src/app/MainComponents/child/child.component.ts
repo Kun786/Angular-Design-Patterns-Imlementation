@@ -8,13 +8,20 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class ChildComponent implements OnInit, OnDestroy {
   _Constructor='';
   _ngOnInIt='';
+  _Interval:any;
   constructor() {
     this._Constructor = 'Child Constructor has Called';
    }
 
   ngOnInit(): void {
-    this._ngOnInIt = 'Parent ngOnInIt life Cycle Hooks is called Remember ngOnInIt() and Constructor once called During Initilization'
+    this._ngOnInIt = 'Parent ngOnInIt life Cycle Hooks is called Remember ngOnInIt() and Constructor once called During Initilization';
+    this._Interval = setInterval(()=>{
+      let counter=0;
+      counter=counter+1;
+      console.log(counter);
+    },1000)
   }
+
 
   ngOnDestroy(): void {
       console.log('Child Component is Destroyed');
