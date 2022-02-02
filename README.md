@@ -43,16 +43,18 @@ thing is called
 :child: Component's Children Component 4(a) ngAfterContentInit() // As this LifeCycle is for component's children component so it mean when you want to send the content (not input variables) from parent to child and when they go from parent to child and initilize then this hook will be called.<br><br>
 :key: Here is the snippet: <br>
 :white_haired_man: Parrent Component<br>
+```Html
 <app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData"><br>
     <p #child >child</p><br> //Here I am sending the content that is p tag to the child without using input decorator here ngAfterContentInIt(LifeCycle) will triggered
 </app-child><br>
 :baby:Child Component<br>
-"ng-content /ng-content"<br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
+<ng-content> </ng-content><br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
 
+```
 In :white_haired_man: Parent Component I have used a template reference varible and pass it to child let me first show you the snippet then explain it.<br>
 ```Html
 <p #child >child</p><br> //Parent
-```
+
 @ContentChild('child') _Child:any;<br> //Child Component.ts<br>
 ngOnInit(): void {<br>
     console.log('COntent intiliazed',this._Child);//Undefined this._Child <br>
@@ -63,7 +65,8 @@ ngOnInit(): void {<br>
     ngAfterContentInit(): void {<br>
       console.log('COntent intiliazed',this._Child);<br>
   }<br>
-  
+
+```
   In the Above Snippet I deliberately called #Child reference variable in the following lifeCycle hooks and proved it that it is called only when the content from parent to child fully rendered or in ngAfterContentInIt()<br>
 <br>
 5 ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
