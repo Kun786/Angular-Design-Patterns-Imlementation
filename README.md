@@ -44,12 +44,7 @@ thing is called
 :key: Here is the snippet: <br>
 :white_haired_man: Parrent Component<br>
 <app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData"><br>
-    <p #child >child</p><br> //Here I am sending the content that is h1 to h6 to the child without using input decorator here ngAfterContentInIt(LifeCycle) will triggered
-    <p>child</p><br>
-    <p>child</p><br>
-    <p>child</p><br>
-    <p>child</p><br>
-    <p>child</p><br>
+    <p #child >child</p><br> //Here I am sending the content that is p tag to the child without using input decorator here ngAfterContentInIt(LifeCycle) will triggered
 </app-child><br>
 :baby:Child Component<b>
 <p class="text-center text-info mt-5">{{IncomingValueForChild}}<br>{{_OnChanges}}</p><br>
