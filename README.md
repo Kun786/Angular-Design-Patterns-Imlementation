@@ -41,7 +41,7 @@ thing is called
 :three: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
 :four: ngDoCheck() // This life cycle is called only one time when component is initialized(one Time) and then keep on called after ngonchanges() or our component rerenderd<br>
 :child: Component's Children Component :four:(a) ngAfterContentInit() // This life cycle is called only one time when component is initialized.<br>
-:heavy_check_mark:       :five:ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
+:five:ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
 to handle memory leaks for example subscribe() events or some other data manipulation it should be unsubscribe() or clear() in ngOnDestroy() to avoid<br>
 memory leaks. A Code Example has given in the child component. 
 
