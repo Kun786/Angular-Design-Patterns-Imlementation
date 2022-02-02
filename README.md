@@ -14,6 +14,23 @@
 ### Angular LifeCycle Hooks
 <img src="https://codecraft.tv/courses/angular/components/lifecycle-hooks/images/lifecycle-hooks.png" width="500" height="500">
 
+#### There are Two Types of Angular LifeCycle Hooks.
+These are the hooks for components or directives, in call order:<br>
+
+constructor()<br>
+OnInit<br>
+DoCheck<br>
+OnChanges<br>
+OnDestroy<br>
+And these are the hooks for a component’s children components:<br>
+
+AfterContentInit<br>
+AfterContentChecked<br>
+AfterViewInit<br>
+AfterViewChecked<br
+
+<br>
+
 :arrow_forward: How Angular Life Cycle Hooks Works??
 Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
 thing is called 
@@ -22,6 +39,7 @@ thing is called
 :heavy_check_mark: :two: ngOnChanges() // This Life-Cycle is called before the ngOnInIt() and this is called when any particual input values chanes coming from another component<br> 
 :heavy_check_mark: :three: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
 :heavy_check_mark: :four: ngDoCheck() // This life cycle is called only one time when component is initialized(one Time) and then keep on called after ngonchanges() or our component rerenderd<br>
+:heavy_check_mark: :Five: ngAfterContentInit() // This life cycle is called only one time when component is initialized.<br>
 :heavy_check_mark:       ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
 to handle memory leaks for example subscribe() events or some other data manipulation it should be unsubscribe() or clear() in ngOnDestroy() to avoid<br>
 memory leaks. A Code Example has given in the child component. 

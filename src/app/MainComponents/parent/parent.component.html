@@ -4,4 +4,11 @@
     <button class="w-100 btn btn-outline-warning" (click)="ShowChild()">Toggle Child</button>
     <input type="text" class="form-control mt-2" [(ngModel)]="_ParentData" placeholder="Send Value to Child">
 </div>
-<app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData"></app-child>
+<app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData">
+    <h1 #child >child</h1>
+    <h2>child</h2>
+    <h3>child</h3>
+    <h4>child</h4>
+    <h5>child</h5>
+    <h6>child</h6>
+</app-child>
