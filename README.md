@@ -47,7 +47,7 @@ thing is called
     <p #child >child</p><br> //Here I am sending the content that is p tag to the child without using input decorator here ngAfterContentInIt(LifeCycle) will triggered
 </app-child><br>
 :baby:Child Component<br>
-<ng-content></ng-content><br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
+'<ng-content></ng-content>'<br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
 
 In :white_haired_man: Parent Component I have used a template reference varible and pass it to child let me first show you the snippet then explain it.<br>
 <h1 #child >child</h1><br> //Parent
