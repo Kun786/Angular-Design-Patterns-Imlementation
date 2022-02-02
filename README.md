@@ -50,7 +50,7 @@ thing is called
 "ng-content /ng-content"<br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
 
 In :white_haired_man: Parent Component I have used a template reference varible and pass it to child let me first show you the snippet then explain it.<br>
-<h1 #child >child</h1><br> //Parent
+<p #child >child</p><br> //Parent
 
 @ContentChild('child') _Child:any;<br> //Child Component.ts<br>
 ngOnInit(): void {<br>
