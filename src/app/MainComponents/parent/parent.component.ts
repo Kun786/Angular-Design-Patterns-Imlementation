@@ -9,6 +9,7 @@ export class ParentComponent implements OnInit{
   _Constructor='';
   _ngOnInIt='';
   _ShowChild=false;
+  _ParentData='';
   constructor() { 
     this._Constructor = 'Parent Constructor has Called';
   }

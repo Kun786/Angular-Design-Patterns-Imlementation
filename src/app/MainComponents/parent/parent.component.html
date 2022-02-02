@@ -2,5 +2,6 @@
 <p class="text-center text-info mt-5">{{_Constructor}}<br>{{_ngOnInIt}}</p>
 <div class="container">
     <button class="w-100 btn btn-outline-warning" (click)="ShowChild()">Toggle Child</button>
+    <input type="text" class="form-control mt-2" [(ngModel)]="_ParentData" placeholder="Send Value to Child">
 </div>
-<app-child *ngIf="_ShowChild"></app-child>
+<app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData"></app-child>
