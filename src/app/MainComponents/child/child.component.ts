@@ -1,11 +1,11 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnDestroy, OnChanges {
+export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck {
   @Input() IncomingValueForChild:any;
   _OnChanges='';
   _Constructor='';
@@ -37,5 +37,9 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges {
     console.log(changes);
     console.log('change() called');
       this._OnChanges = "ngOnChanges() called";
+  }
+
+  ngDoCheck(): void {
+      console.log('Child DoCheck() is Provked')
   }
 }
