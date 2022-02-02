@@ -1,11 +1,11 @@
-import { AfterContentInit, Component, ContentChild, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, ContentChild, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterContentInit {
+export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterContentInit, AfterContentChecked {
   @Input() IncomingValueForChild:any;
   @ContentChild('child') _Child:any;
   _OnChanges='';
@@ -47,5 +47,9 @@ export class ChildComponent implements OnInit, OnDestroy, OnChanges, DoCheck, Af
   }
   ngAfterContentInit(): void {
       console.log('COntent intiliazed',this._Child);
+  }
+
+  ngAfterContentChecked(): void {
+      console.log('ContentChecked Called');
   }
 }
