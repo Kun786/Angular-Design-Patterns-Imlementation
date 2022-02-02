@@ -1,8 +1,8 @@
 <p align="center">
-
-# Angular-Design-Patterns-Imlementation
-
   <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular-logo" width="120px" height="120px"/>
+
+  # Angular-Design-Patterns-Imlementation
+
   <br>
   <i>Angular is a development platform for building mobile and desktop web applications
     <br> using Typescript/JavaScript and other languages.</i>
