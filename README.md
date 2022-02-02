@@ -36,12 +36,42 @@ And these are the hooks for a component’s children components:<br>
 Once the Angular Application Boostrap and The Appcomponent is called it then start initialzing the compoenents. Once the Component is initialized first
 thing is called 
 
-:one: Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br>
-:two: ngOnChanges() // This Life-Cycle is called before the ngOnInIt() and this is called when any particual input values chanes coming from another component<br> 
-:three: ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
-:four: ngDoCheck() // This life cycle is called only one time when component is initialized(one Time) and then keep on called after ngonchanges() or our component rerenderd<br>
-:child: Component's Children Component :four:(a) ngAfterContentInit() // This life cycle is called only one time when component is initialized.<br>
-:five:ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
+1 Constructor() // This is not Angular Life-Cycle its the Basic Concept of OOP after that<br>
+2 ngOnChanges() // This Life-Cycle is called before the ngOnInIt() and this is called when any particual input values chanes coming from another component<br> 
+3 ngOnInIt() // This life cycle is called only one time when component is initialized.<br>
+4 ngDoCheck() // This life cycle is called only one time when component is initialized(one Time) and then keep on called after ngonchanges() or our component rerenderd<br>
+:child: Component's Children Component 4(a) ngAfterContentInit() // As this LifeCycle is for component's children component so it mean when you want to send the content (not input variables) from parent to child and when they go from parent to child and initilize then this hook will be called.<br>
+:key: Here is the snippet: <br>
+:white_haired_man: Parrent Component<br>
+<app-child *ngIf="_ShowChild" [IncomingValueForChild]="_ParentData"><br>
+    <h1 #child >child</h1><br> //Here I am sending the content that is h1 to h6 to the child without using input decorator here ngAfterContentInIt(LifeCycle) will triggered
+    <h2>child</h2><br>
+    <h3>child</h3><br>
+    <h4>child</h4><br>
+    <h5>child</h5><br>
+    <h6>child</h6><br>
+</app-child><br>
+:baby:Child Component<b>
+<p class="text-center text-info mt-5">{{IncomingValueForChild}}<br>{{_OnChanges}}</p><br>
+<ng-content></ng-content><br> // ng-content selector will help you to render the content coming from parent to child and once it render then ngAfterContentInIt() will call<br>
+
+In :white_haired_man: Parent Component I have used a template reference varible and pass it to child let me first show you the snippet then explain it.<br>
+<h1 #child >child</h1><br> //Parent
+
+@ContentChild('child') _Child:any;<br> //Child Component.ts<br>
+ngOnInit(): void {<br>
+    console.log('COntent intiliazed',this._Child);//Undefined this._Child <br>
+    }<br>
+    ngOnChanges(changes: SimpleChanges): void { <br>
+    console.log('COntent intiliazed',this._Child);//Undefined this._Child <br>
+    }<br>
+    ngAfterContentInit(): void {<br>
+      console.log('COntent intiliazed',this._Child);<br>
+  }<br>
+  
+  In the Above Snippet I deliberately called #Child reference variable in the following lifeCycle hooks and proved it that it is called only when the content from parent to child fully rendered or in ngAfterContentInIt()<br>
+<br>
+5 ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
 to handle memory leaks for example subscribe() events or some other data manipulation it should be unsubscribe() or clear() in ngOnDestroy() to avoid<br>
 memory leaks. A Code Example has given in the child component. 
 
