@@ -70,6 +70,9 @@ ngOnInit(): void {<br>
   In the Above Snippet I deliberately called #Child reference variable in the following lifeCycle hooks and proved it that it is called only when the content from parent to child fully rendered or in ngAfterContentInIt()<br>
 <br>
 :child: Component's Children Component 4(b) ngAfterContencChecked() // This LifeCycle will called after ngAfterContentInIt(one Time) and then after every ngDoCheck(LifeCycle)<br>
+
+:child: Component's Children Component 4(b) ngAfterContencChecked() // This LifeCycle will called after ngAfterContentInIt(one Time) and then after every ngDoCheck(LifeCycle)<br>
+:child: Component's Children Component 4(b) ngAfterContencChecked() // This LifeCycle will called after ngAfterContentInIt(one Time) and then after every ngDoCheck(LifeCycle)<br>
 5 ngOnDestroy() // This life cycle is called when the component is no longer exist/visible on DOM. ngOnDestroy() is very helpful<br>
 to handle memory leaks for example subscribe() events or some other data manipulation it should be unsubscribe() or clear() in ngOnDestroy() to avoid<br>
 memory leaks. A Code Example has given in the child component. 
